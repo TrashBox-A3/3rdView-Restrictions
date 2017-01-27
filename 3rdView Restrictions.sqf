@@ -21,7 +21,7 @@ _canonmortor = ["Staticmortor","StaticCannon"];
 
 			waitUntil {cameraView == "EXTERNAL" || cameraView == "GROUP"};
 
-  　　//歩兵//
+  　　//歩兵//速度で制限//
 			if  (((vehicle player) == player) && (speed ( player)) >= 5) then {
 				player switchCamera "INTERNAL";
 			};
