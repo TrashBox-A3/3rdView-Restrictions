@@ -21,44 +21,43 @@ _canonmortor = ["Staticmortor","StaticCannon"];
 
 			waitUntil {cameraView == "EXTERNAL" || cameraView == "GROUP"};
 
-  　　//歩兵//
+  　　　　//歩兵//
 			if  (((vehicle player) == player) && (speed ( player)) >= 5) then {
 				player switchCamera "INTERNAL";
 			};
 			sleep 0.1;
 
-  　　//車//
+  　　　　//車//
 			if (((vehicle player)isKindOf "Car") && (speed (vehicle player)) >= 0) then {
 				(vehicle player) switchCamera "Internal";
 			};
 			sleep 0.1;
 
-  　　//戦車//
+  　　　　//戦車//
 			if (((vehicle player)isKindOf "Tank") && (speed (vehicle player)) >= 1) then {
 				(vehicle player) switchCamera "Internal";
 			};
 			sleep 0.1;
 
-  　　//迫撃砲//
+  　　　　//迫撃砲//
 			if (({vehicle player isKindOf _x} count _canonmortor > 0) && (speed (vehicle player)) >= 20) then {
 				(vehicle player) switchCamera "Internal";
 			};
 			sleep 0.1;
 
-  　　//固定機銃//
+  　　　　//固定機銃//
 			if ({vehicle player isKindOf _x} count _staticweapon > 0)  then {
 				(vehicle player) switchCamera "Internal";
 			};
 			sleep 0.1;
 
-
-  　　//ヘリコプター//
+  　　　　//ヘリコプター//
       if (( vehicle player) isKindOf "Helicopter" && (getPosVisual (vehicle player) select 2) > 5) then {
 				(vehicle player) switchCamera "Internal";
 			};
             sleep 0.1;
 
-  　　//固定翼機//
+  　　　　//固定翼機//
       if ((vehicle player) isKindOf "Plane" && (speed (vehicle player)) >= 60) then {
 				(vehicle player) switchCamera "Internal";
 			};
@@ -70,9 +69,7 @@ _canonmortor = ["Staticmortor","StaticCannon"];
 			};
 			sleep 0.1;
 
-
-
-
+　　
 		};
 	};
 
