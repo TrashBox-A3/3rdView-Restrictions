@@ -1,8 +1,6 @@
 ///Script by Rodeostar42///
 
-
 if (!isDedicated) then {
-
 
 //固定機銃とか//
 _staticweapon = ["StaticGrenadeLauncher","StaticMGWeapon","StaticATWeapon"];
